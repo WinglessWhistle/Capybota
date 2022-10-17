@@ -3,7 +3,6 @@ const TickEmoji = '✅'
 const StopEmoji = '🛑'
 
 function OnMessage(message) {
-    console.log("pain");
     let attachments = message.attachments.filter(
         attachment => attachment.contentType.startsWith("video/")
     );
@@ -20,15 +19,15 @@ function OnMessage(message) {
                 return reaction.emoji.name === StopEmoji && user.id === message.author.id;
             };
 
-            const collectortick = message.createReactionCollector({ filtertick, time: 120_000 });
+            const collectortick = message.createReactionCollector({ filter: filtertick, time: 120_000 });
             collectortick.on('collect', () => {
 
                 message.reply(random_item(responses) + "/10");
-                reactionManager.removeAll();
+                message.reactions.removeAll();
 
             })
 
-            const collectorstop = message.createReactionCollector({ filterstop, time: 120_000});
+            const collectorstop = message.createReactionCollector({ filter: filterstop, time: 120_000});
             collectorstop.on('collect', () => {
 
                 message.reactions.removeAll()
