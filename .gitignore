@@ -1,0 +1,10 @@
+# Hide the important stuff awyay from peeking eyes.
+.env
+config.js
+../
+# This is useless, nobody needs to see this except nodejs.
+node_modules
+package-lock.json
+
+assets/miitopia/soundtrack
+assets/miitopia/tmp
