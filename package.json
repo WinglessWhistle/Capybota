@@ -1,12 +1,12 @@
 {
-  "name": "SSDBot",
+  "name": "Capybota",
   "version": "1.0.0",
-  "description": "SeeSharpeDen Discord Bot",
+  "description": "Capybota",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
   },
-  "author": "SSD",
+  "author": "WinglessWhistle",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.25.0",
