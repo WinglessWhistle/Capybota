@@ -43,7 +43,8 @@ client.once('ready', () => {
 })
 
 // get message
-client.on('message', message => {
+client.on('messageCreate', message => {
+    log("Bot", 'working');
     // Wingless's video rating system.
     VideoRate.OnMessage(message);
 
